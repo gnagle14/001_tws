@@ -3,13 +3,5 @@
 @import '../scss/_partials/_var';
 @import '../scss/_partials/_imports';
 @import '../scss/_partials/_mixins';
-@import '../scss/_partials/_uni';
-
-
-// @import '../scss/partials/_var';
-// @import '../scss/partials/_imports';
-// @import '../scss/partials/_mixins';
-//
-// @import 'uni';
-// @import 'mainHead';
-// @import 'mainContent';
+@import '../scss/_elements/_layout';
+@import '../scss/_elements/_sidebar-left';
