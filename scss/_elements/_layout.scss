@@ -49,23 +49,40 @@ img   { display: block;}
 	flex-direction: row;
 	align-items: stretch;
 	overflow-x: scroll;
+	max-width: 100%;
 
 	.sb-l, .sb-r {
 		position: relative;
 		width: 60px;
 		background-color: #fff;
+		transition: all 333ms ease-in-out;
+		&.open-left { width: 140px; }
 	}
 
 	.main-content {
 		flex-grow: 1;
 		padding: 40px;
 		background-color: $grey;
+		@include MQ(M) {
+			padding: 20px;
+		}
 
 		section {
+			position: relative;
 			height: 400px;
 			margin-bottom: 40px;
-			background-color: $gold;
+			background-color: white;
+			overflow: hidden;
 			&:last-of-type { margin-bottom: 0; }
+			img { width: 100%; }
+			&.feat {
+				height: 600px;
+				// background: {
+				// 	image: url('../assets/images/pure_pow.jpg');
+				// 	position: center bottom;
+				// 	size: cover;
+				// }
+		  }
 		}
 	}
 
@@ -75,6 +92,7 @@ img   { display: block;}
 		.sb-l, .sb-r {
 			height: 60px;
 			width: 100%;
+			&.open-left { height: 140px; width: 100% }
 		}
 	}
 }
