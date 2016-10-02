@@ -462,3 +462,105 @@ img {
   content: "";
   display: table;
   clear: both; }
+
+#everything {
+  width: 100%;
+  background-color: #424242;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-align: stretch;
+      align-items: stretch; }
+
+.head-left, .head-right {
+  position: relative;
+  width: 50px;
+  min-width: 50px;
+  background-color: #ffffff;
+  z-index: 666;
+  transition: all 333ms ease-in-out; }
+
+.head-left.left-open {
+  width: 140px;
+  min-width: 140px;
+  transition: all 666ms ease-in-out; }
+
+.content {
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  background-color: #DCDBDC;
+  padding: 40px;
+  max-width: calc(100% - 120px); }
+  .content .section {
+    position: relative;
+    display: block;
+    height: 600px;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    overflow: hidden; }
+    .content .section:last-of-type {
+      margin-bottom: 0; }
+    .content .section.feat {
+      height: auto; }
+    .content .section img {
+      width: 100%;
+      height: auto; }
+
+.left-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 100vh;
+  border-right: 1px solid rgba(66, 66, 66, 0.4);
+  transition: all 333ms ease-in-out; }
+  .left-content.left-is-open {
+    width: 140px;
+    transition: all 666ms ease-in-out; }
+  .left-content .logo {
+    position: absolute;
+    bottom: 40px;
+    right: 10px;
+    width: 30px;
+    height: 245px; }
+    .left-content .logo img {
+      width: 30px;
+      height: auto; }
+
+.menu {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  width: 30px;
+  height: 30px; }
+  .menu:hover .flake {
+    transform: rotate(90deg); }
+  .menu .flake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 22px;
+    height: 22px;
+    transition: all 333ms ease-in-out; }
+  .menu .flake-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 22px;
+    background-color: #d1ad33;
+    transition: all 666ms; }
+    .menu .flake-line:before, .menu .flake-line:after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      left: 50%;
+      width: 3px;
+      height: 20px;
+      background-color: #d1ad33; }
+    .menu .flake-line:before {
+      transform: translateX(-50%) rotate(56deg); }
+    .menu .flake-line:after {
+      transform: translateX(-50%) rotate(304deg); }
